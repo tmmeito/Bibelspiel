@@ -11,7 +11,7 @@ import SwiftUI
 struct BibelbuecherAuswahlView: View {
     
     @EnvironmentObject var globals: Globals
-    @ObservedObject var settings = Settings()
+    @ObservedObject var settings = Settings.shared
     
     let breite = CGFloat(0.26)
     let hoehe = CGFloat(0.5)
@@ -60,7 +60,7 @@ struct BibelbuecherAuswahlView: View {
 struct VorhandeneBBuecherArray: View {
 
     @EnvironmentObject var globals: Globals
-    @ObservedObject var settings = Settings()
+    @ObservedObject var settings = Settings.shared
     
     var body: some View {
 
