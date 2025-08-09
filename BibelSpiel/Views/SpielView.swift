@@ -42,8 +42,7 @@ struct SpielView: View {
                     SpielFortschrittView()
                         .position(x: geometry.size.width * 0.645, y: geometry.size.height * 0.515)
                     BibelbuecherAuswahlView()
-                        .frame(width: geometry.size.width * 0.26, height: geometry.size.height * 0.5)
-                        .position(x: geometry.size.width * 0.13, y: geometry.size.height * 0.765)
+                        .position(x: geometry.size.width * 0.149, y: geometry.size.height * 0.765)
                 }
                 
                 StatusbarView()
