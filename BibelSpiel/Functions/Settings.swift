@@ -9,6 +9,8 @@
 import Foundation
 
 class Settings: ObservableObject {
+
+    static let shared = Settings()
     
     @Published var ersterStart: Bool = UserDefaults.standard.bool(forKey: "ersterStart") {
         didSet {
