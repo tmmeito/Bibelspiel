@@ -1,0 +1,30 @@
+# Xcode / iOS
+DerivedData/
+build/
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+
+# User-spezifische Xcode-Daten
+**/*.xcuserdatad/
+**/*.xcworkspace/xcuserdata/
+**/*.xcodeproj/project.xcworkspace/xcuserdata/
+
+# SwiftPM
+.swiftpm/
+Packages/
+Package.resolved
+
+# macOS
+.DS_Store
+
+# Fastlane/Build-Outputs (falls genutzt)
+fastlane/report.xml
+fastlane/test_output/
+*.ipa
+*.dSYM.zip
+
+# Geheimnisse / Konfigurationen
+*.xcconfig
+Secrets.plist
+

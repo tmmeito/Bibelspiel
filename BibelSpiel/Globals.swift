@@ -103,14 +103,11 @@ class Globals: ObservableObject {
     
     
     func calculateBreiteAnzeigeZeit(breite: CGFloat) -> CGFloat {
-        
-        var prozent = Double(self.spielStartDatumInt * 100) / Double(spieldauerReferenz())
-        
-        if prozent > 100 {
-            prozent = 100
-        }
-        
-        return CGFloat((Int(breite) - 14) * Int(prozent) / 100)
+
+        let referenz = spieldauerReferenz()
+        guard referenz > 0 else { return 0 }
+
+        return CalculateBreiteAnzeigeZeit(breite: breite, spielStartDatumInt: self.spielStartDatumInt, spieldauerReferenz: referenz)
     }
     
     

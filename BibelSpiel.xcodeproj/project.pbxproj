@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		C502E7AC2E47D6C100FB3A0E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C502E7AB2E47D6B100FB3A0E /* README.md */; };
+		C502E7AE2E47D7BD00FB3A0E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C502E7AD2E47D7B400FB3A0E /* .gitignore */; };
 		C50DE31A24433783006992DA /* BibelbuecherAuswahlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50DE31924433783006992DA /* BibelbuecherAuswahlView.swift */; };
 		C5127BD62442678500D3AB19 /* Bibelbuch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5127BD52442678500D3AB19 /* Bibelbuch.swift */; };
 		C5289309244C171700053A96 /* FortschrittHighscoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5289308244C171700053A96 /* FortschrittHighscoreView.swift */; };
@@ -67,6 +68,7 @@
 
 /* Begin PBXFileReference section */
 		C502E7AB2E47D6B100FB3A0E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C502E7AD2E47D7B400FB3A0E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		C50DE31924433783006992DA /* BibelbuecherAuswahlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibelbuecherAuswahlView.swift; sourceTree = "<group>"; };
 		C5127BD52442678500D3AB19 /* Bibelbuch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bibelbuch.swift; sourceTree = "<group>"; };
 		C5289308244C171700053A96 /* FortschrittHighscoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortschrittHighscoreView.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				C502E7AB2E47D6B100FB3A0E /* README.md */,
+				C502E7AD2E47D7B400FB3A0E /* .gitignore */,
 				C5C914012439167E00C59B07 /* BibelSpiel */,
 				C5C914002439167E00C59B07 /* Products */,
 			);
@@ -283,8 +286,9 @@
 		C5C913F72439167E00C59B07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1640;
 				ORGANIZATIONNAME = meitosoft;
 				TargetAttributes = {
 					C5C913FE2439167E00C59B07 = {
@@ -319,6 +323,7 @@
 				C5C914122439168700C59B07 /* LaunchScreen.storyboard in Resources */,
 				C502E7AC2E47D6C100FB3A0E /* README.md in Resources */,
 				C540B6AB2454357200C5B4BC /* help.mp3 in Resources */,
+				C502E7AE2E47D7BD00FB3A0E /* .gitignore in Resources */,
 				C5CAEE122451577E0082C358 /* falsch2.mp3 in Resources */,
 				C5C9140F2439168700C59B07 /* Preview Assets.xcassets in Resources */,
 				C5C9140C2439168700C59B07 /* Assets.xcassets in Resources */,
@@ -424,6 +429,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -432,8 +438,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = BJRWSW5JCZ;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -484,6 +492,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -492,8 +501,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = BJRWSW5JCZ;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -519,7 +530,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"BibelSpiel/Preview Content\"";
-				DEVELOPMENT_TEAM = BJRWSW5JCZ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BibelSpiel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -541,7 +551,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"BibelSpiel/Preview Content\"";
-				DEVELOPMENT_TEAM = BJRWSW5JCZ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BibelSpiel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
