@@ -18,7 +18,14 @@ struct Bibelvers: Hashable {
     var kapitelInt = 0
     var versInt = 0
     var txt = ""
-        
+
+    // Gleichheit und Hashwert basieren ausschließlich auf `reihenfolgeNr`.
+    // Zwei Bibelverse mit derselben Nummer gelten als identisch, auch wenn
+    // sich andere Eigenschaften unterscheiden.
+    static func == (lhs: Bibelvers, rhs: Bibelvers) -> Bool {
+        lhs.reihenfolgeNr == rhs.reihenfolgeNr
+    }
+
     func hash(into hasher: inout Hasher) {
         hasher.combine(reihenfolgeNr)
     }
