@@ -11,7 +11,8 @@ import SwiftUI
 
 
 public func CalculateBreiteAnzeigeZeit(breite: CGFloat, spielStartDatumInt: Int, spieldauerReferenz: Int) -> CGFloat {
-    
+    guard spieldauerReferenz > 0 else { return 0 }
+
     var prozent = spielStartDatumInt * 100 / spieldauerReferenz
     
     if prozent > 100 {
