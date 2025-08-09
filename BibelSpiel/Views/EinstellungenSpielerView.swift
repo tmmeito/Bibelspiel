@@ -35,7 +35,9 @@ struct EinstellungenSpielerView: View {
                                 PlaySound(sound: "select", type: "mp3", volume: self.settings.selectedSoundVolume)
                             }
                             withAnimation(.none) {
-                                self.settings.aktuellerSpielerName = spielerN.name!
+                                if let name = spielerN.name {
+                                    self.settings.aktuellerSpielerName = name
+                                }
                             }
                         }) {
                             Text(spielerN.name ?? "kein Name")
@@ -76,7 +78,8 @@ struct EinstellungenSpielerView: View {
                                 if self.spieler.count > 0 {
                                     var vorhanden = 0
                                     for spielerName in self.spieler {
-                                        if spielerName.name!.capitalized == self.neuerName.capitalized {
+                                        if let existingName = spielerName.name,
+                                           existingName.capitalized == self.neuerName.capitalized {
                                             // neu eingegebener Name schon vorhanden
                                             vorhanden += 1
                                             if self.settings.selectedSound == 1 {
@@ -89,7 +92,11 @@ struct EinstellungenSpielerView: View {
                                         let spieler = Spieler(context: self.moc)
                                         spieler.name = self.neuerName
                                         spieler.id = UUID()
-                                        try! self.moc.save()
+                                        do {
+                                            try self.moc.save()
+                                        } catch {
+                                            print("Fehler beim Speichern: \(error.localizedDescription)")
+                                        }
                                     }
                                     
                                 } else {
@@ -97,7 +104,11 @@ struct EinstellungenSpielerView: View {
                                     let spieler = Spieler(context: self.moc)
                                     spieler.name = self.neuerName
                                     spieler.id = UUID()
-                                    try! self.moc.save()
+                                    do {
+                                        try self.moc.save()
+                                    } catch {
+                                        print("Fehler beim Speichern: \(error.localizedDescription)")
+                                    }
                                 }
                             } else {
                                 if self.settings.selectedSound == 1 {
@@ -131,7 +142,11 @@ struct EinstellungenSpielerView: View {
             if spieler[index].name == self.settings.aktuellerSpielerName {
                 self.settings.aktuellerSpielerName = " - "
             }
-            try! moc.save()
+            do {
+                try moc.save()
+            } catch {
+                print("Fehler beim Speichern: \(error.localizedDescription)")
+            }
         }
     }
     

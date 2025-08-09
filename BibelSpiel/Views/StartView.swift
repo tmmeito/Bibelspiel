@@ -95,8 +95,14 @@ struct StartView: View {
                         let spieler = Spieler(context: self.moc)
                         spieler.name = "Spieler 1"
                         spieler.id = UUID()
-                        self.settings.aktuellerSpielerName = spieler.name!
-                        try! self.moc.save()
+                        if let name = spieler.name {
+                            self.settings.aktuellerSpielerName = name
+                        }
+                        do {
+                            try self.moc.save()
+                        } catch {
+                            print("Fehler beim Speichern: \(error.localizedDescription)")
+                        }
                         self.settings.ersterStart = true
                         
                     }
