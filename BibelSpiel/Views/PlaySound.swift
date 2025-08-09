@@ -16,8 +16,9 @@ func PlaySound(sound: String, type: String, volume: Float) {
         
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
-            audioPlayer?.play()
             audioPlayer?.volume = volume
+            audioPlayer?.prepareToPlay()
+            audioPlayer?.play()
         } catch {
             print("ERROR: Could not find and play sound file!")
         }
