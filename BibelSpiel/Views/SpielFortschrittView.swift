@@ -11,7 +11,7 @@ import SwiftUI
 struct SpielFortschrittView: View {
     
     @EnvironmentObject var globals: Globals
-    @ObservedObject var settings = Settings()
+    @ObservedObject var settings = Settings.shared
     
     var body: some View {
         
@@ -53,7 +53,7 @@ struct SpielFortschrittView: View {
 struct HebraeischeSchriften: View {
     
     @EnvironmentObject var globals: Globals
-    @ObservedObject var settings = Settings()
+    @ObservedObject var settings = Settings.shared
     @State var bbuecherArray = [Bibelbuch]()
     
     var body: some View {
@@ -126,7 +126,7 @@ struct HebraeischeSchriften: View {
 struct CGriechischeSchriften: View {
     
     @EnvironmentObject var globals: Globals
-    @ObservedObject var settings = Settings()
+    @ObservedObject var settings = Settings.shared
     @State var bbuecherArray = [Bibelbuch]()
     
     var body: some View {
