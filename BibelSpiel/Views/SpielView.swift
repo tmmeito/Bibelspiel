@@ -11,7 +11,7 @@ import SwiftUI
 struct SpielView: View {
     
     @EnvironmentObject var globals: Globals
-    @ObservedObject var settings = Settings()
+    @ObservedObject var settings = Settings.shared
     
     let positionX: CGFloat = 1.22
     
