@@ -36,13 +36,12 @@ struct SpielView: View {
 
                     BibelbuecherAuswahlView()
                         .position(x: geometry.size.width * positionX, y: geometry.size.height * 0.765)
-                        
-                }
-                else if self.settings.selectedAuswahlleiste == 1 {  // links
+
+                } else if self.settings.selectedAuswahlleiste == 1 {  // links
                     SpielFortschrittView()
-                        .position(x: UIScreen.main.bounds.width * 0.645, y: UIScreen.main.bounds.height * 0.515)
+                        .position(x: geometry.size.width * 0.645, y: geometry.size.height * 0.515)
                     BibelbuecherAuswahlView()
-                        .position(x: UIScreen.main.bounds.width * 0.149, y: UIScreen.main.bounds.height * 0.515)
+                        .position(x: geometry.size.width * 0.149, y: geometry.size.height * 0.765)
                 }
                 
                 StatusbarView()
