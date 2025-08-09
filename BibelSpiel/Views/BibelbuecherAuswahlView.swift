@@ -11,46 +11,43 @@ import SwiftUI
 struct BibelbuecherAuswahlView: View {
     
     @EnvironmentObject var globals: Globals
-    @ObservedObject var settings = Settings()
+    @ObservedObject var settings = Settings.shared
     
-    let breite = CGFloat(0.26)
-    let hoehe = CGFloat(0.5)
     let eckenRadius = CGFloat(20)
     
     var body: some View {
         
         GeometryReader { geometry in
-        
-        ZStack {
-            // Hintergrund und Umrandung  w:235
-            RoundedRectangle(cornerRadius: 20, style: .circular)
-                .fill(Color("Hell"))
-                .frame(width: geometry.size.width * self.breite, height: geometry.size.height * self.hoehe, alignment: .center)
-                .shadow(color: Color("Schatten"), radius: 5, x: 5, y: 5)
-                .overlay(RoundedRectangle(cornerRadius: self.eckenRadius).stroke(Color("Dunkel"), lineWidth: 4))
-            
-            // Infoleiste mit Beschriftung
-            ZStack() {
-                HStack {
-                    Text("\(TxtBaustein(language: self.settings.language, phrase: "naechsteBibelbuch"))")
-                        .font(.title)
-                        .bold()
-                        .foregroundColor(Color("Hell"))
-                        .padding(.top, 15)
-                        .padding(.bottom, 15)
-                }.frame(width: geometry.size.width * self.breite, height: (geometry.size.height * (self.hoehe - 0.1)) * 0.11, alignment: .center)
-                    .background(Color("Dunkel"))
-                    .offset(x: 0, y: -(geometry.size.height * 0.2))
-                    .onTapGesture(count: 2) {
-                        self.globals.cheatNaechstesBB.toggle()
-                        self.globals.cheatHilfe.toggle()
-                    }
-                
-                
-                VorhandeneBBuecherArray()
-                    .offset(x: 0, y: 25)
-                
-            }
+            ZStack {
+                // Hintergrund und Umrandung  w:235
+                RoundedRectangle(cornerRadius: self.eckenRadius, style: .circular)
+                    .fill(Color("Hell"))
+                    .frame(width: geometry.size.width, height: geometry.size.height, alignment: .center)
+                    .shadow(color: Color("Schatten"), radius: 5, x: 5, y: 5)
+                    .overlay(RoundedRectangle(cornerRadius: self.eckenRadius).stroke(Color("Dunkel"), lineWidth: 4))
+
+                // Infoleiste mit Beschriftung
+                ZStack() {
+                    HStack {
+                        Text("\(TxtBaustein(language: self.settings.language, phrase: "naechsteBibelbuch"))")
+                            .font(.title)
+                            .bold()
+                            .foregroundColor(Color("Hell"))
+                            .padding(.top, 15)
+                            .padding(.bottom, 15)
+                    }.frame(width: geometry.size.width, height: geometry.size.height * 0.088, alignment: .center)
+                        .background(Color("Dunkel"))
+                        .offset(x: 0, y: -(geometry.size.height * 0.4))
+                        .onTapGesture(count: 2) {
+                            self.globals.cheatNaechstesBB.toggle()
+                            self.globals.cheatHilfe.toggle()
+                        }
+
+
+                    VorhandeneBBuecherArray()
+                        .offset(x: 0, y: 25)
+
+                }
             }
         }
     }
@@ -60,7 +57,7 @@ struct BibelbuecherAuswahlView: View {
 struct VorhandeneBBuecherArray: View {
 
     @EnvironmentObject var globals: Globals
-    @ObservedObject var settings = Settings()
+    @ObservedObject var settings = Settings.shared
     
     var body: some View {
 

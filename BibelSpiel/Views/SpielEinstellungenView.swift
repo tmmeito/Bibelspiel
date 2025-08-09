@@ -11,7 +11,7 @@ import SwiftUI
 struct SpielEinstellungenView: View {
     
     @EnvironmentObject var globals: Globals
-    @ObservedObject var settings = Settings()
+    @ObservedObject var settings = Settings.shared
     
     let hoehe = CGFloat(545)
     let hoeheHintergrundUeberschrift = CGFloat(60)
@@ -82,7 +82,7 @@ struct SpielEinstellungenView: View {
 
 struct Einstellungen: View {
     
-    @ObservedObject var settings = Settings()
+    @ObservedObject var settings = Settings.shared
     @EnvironmentObject var globals: Globals
     @Binding var showNeuerSpieler: Bool
     @State var showCredits = false
