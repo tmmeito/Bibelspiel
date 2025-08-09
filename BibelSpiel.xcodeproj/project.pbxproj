@@ -1,0 +1,596 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C502E7AC2E47D6C100FB3A0E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C502E7AB2E47D6B100FB3A0E /* README.md */; };
+		C50DE31A24433783006992DA /* BibelbuecherAuswahlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50DE31924433783006992DA /* BibelbuecherAuswahlView.swift */; };
+		C5127BD62442678500D3AB19 /* Bibelbuch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5127BD52442678500D3AB19 /* Bibelbuch.swift */; };
+		C5289309244C171700053A96 /* FortschrittHighscoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5289308244C171700053A96 /* FortschrittHighscoreView.swift */; };
+		C52A169B24521BBB00B22196 /* select.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C52A169A24521BBB00B22196 /* select.mp3 */; };
+		C5301698243BD70A00534731 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5301697243BD70A00534731 /* Globals.swift */; };
+		C5368A512449BEAA00BDC79D /* SpielEinstellungenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5368A502449BEAA00BDC79D /* SpielEinstellungenView.swift */; };
+		C540B6AB2454357200C5B4BC /* help.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C540B6AA2454357200C5B4BC /* help.mp3 */; };
+		C5519C0F2444792A00770185 /* HilfeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5519C0E2444792A00770185 /* HilfeView.swift */; };
+		C553B19D243E3B8300E7C7A4 /* EinstellungenSpielerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C553B19C243E3B8300E7C7A4 /* EinstellungenSpielerView.swift */; };
+		C562FB9E244B31CD003068FF /* Hilfe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C562FB9D244B31CD003068FF /* Hilfe.swift */; };
+		C562FBA0244B333C003068FF /* HilfenArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = C562FB9F244B333C003068FF /* HilfenArray.swift */; };
+		C562FBA2244B3516003068FF /* Bibelvers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C562FBA1244B3516003068FF /* Bibelvers.swift */; };
+		C562FBA4244B361C003068FF /* BibelverseArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = C562FBA3244B361C003068FF /* BibelverseArray.swift */; };
+		C562FBA6244B6145003068FF /* DELETEFortschrittListeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C562FBA5244B6145003068FF /* DELETEFortschrittListeView.swift */; };
+		C562FBA8244B735F003068FF /* FortschrittView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C562FBA7244B735F003068FF /* FortschrittView.swift */; };
+		C565180E243EE2780095DAF2 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C565180D243EE2780095DAF2 /* Settings.swift */; };
+		C57C082524514AA60059098B /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57C082424514AA60059098B /* PlaySound.swift */; };
+		C57E44CA2439D36A00FB9D5C /* TxtBaustein.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57E44C92439D36A00FB9D5C /* TxtBaustein.swift */; };
+		C57E44CD2439D58800FB9D5C /* Fusszeile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57E44CC2439D58800FB9D5C /* Fusszeile.swift */; };
+		C57E44CF2439DFC100FB9D5C /* ButtonGrossView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57E44CE2439DFC100FB9D5C /* ButtonGrossView.swift */; };
+		C5875438244AE5230021BCD4 /* CalculateBreiteAnzeigeZeit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5875437244AE5230021BCD4 /* CalculateBreiteAnzeigeZeit.swift */; };
+		C5933CD724478A4B00307C42 /* SpielEndeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5933CD624478A4B00307C42 /* SpielEndeView.swift */; };
+		C5933CD924478F5700307C42 /* SpielEndeBalkenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5933CD824478F5700307C42 /* SpielEndeBalkenView.swift */; };
+		C5953C43245003AC00C5D23B /* CalculatePositionFortschritt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5953C42245003AC00C5D23B /* CalculatePositionFortschritt.swift */; };
+		C5953C452450040700C5D23B /* CreateFetchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5953C442450040700C5D23B /* CreateFetchRequest.swift */; };
+		C597FF1C244EB5E2001E8C09 /* FortschrittFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C597FF1B244EB5E1001E8C09 /* FortschrittFilterView.swift */; };
+		C598CB712455910B002740F1 /* Formatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C598CB702455910B002740F1 /* Formatter+Extensions.swift */; };
+		C598CB7324559122002740F1 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C598CB7224559122002740F1 /* Int+Extensions.swift */; };
+		C59DDE792441BA1000C3693D /* SpielView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59DDE782441BA1000C3693D /* SpielView.swift */; };
+		C59DDE7B2441C2F100C3693D /* SpielFortschrittView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59DDE7A2441C2F100C3693D /* SpielFortschrittView.swift */; };
+		C5ACD83B244F4CC40042E934 /* GeneratePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ACD83A244F4CC40042E934 /* GeneratePosition.swift */; };
+		C5BAD243244A28E900096ECC /* SpielBeendenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BAD242244A28E900096ECC /* SpielBeendenView.swift */; };
+		C5BAD247244A2DF600096ECC /* ButtonVariabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BAD246244A2DF600096ECC /* ButtonVariabelView.swift */; };
+		C5BF800A245486620062B60B /* WillkommenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BF8009245486620062B60B /* WillkommenView.swift */; };
+		C5BF800C245490580062B60B /* SpracheWaehlenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BF800B245490580062B60B /* SpracheWaehlenView.swift */; };
+		C5C82A5C2450BAD9008FD038 /* SpielEndeBonusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C82A5B2450BAD9008FD038 /* SpielEndeBonusView.swift */; };
+		C5C914032439167E00C59B07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C914022439167E00C59B07 /* AppDelegate.swift */; };
+		C5C914052439167E00C59B07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C914042439167E00C59B07 /* SceneDelegate.swift */; };
+		C5C914082439167E00C59B07 /* BibelSpiel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C5C914062439167E00C59B07 /* BibelSpiel.xcdatamodeld */; };
+		C5C9140A2439167E00C59B07 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C914092439167E00C59B07 /* StartView.swift */; };
+		C5C9140C2439168700C59B07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5C9140B2439168700C59B07 /* Assets.xcassets */; };
+		C5C9140F2439168700C59B07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5C9140E2439168700C59B07 /* Preview Assets.xcassets */; };
+		C5C914122439168700C59B07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5C914102439168700C59B07 /* LaunchScreen.storyboard */; };
+		C5C9141B243920AE00C59B07 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C9141A243920AE00C59B07 /* LogoView.swift */; };
+		C5C91421243936AD00C59B07 /* Kopfzeile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C91420243936AD00C59B07 /* Kopfzeile.swift */; };
+		C5CAEE05245152750082C358 /* menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C5CAEE04245152740082C358 /* menu.mp3 */; };
+		C5CAEE08245153000082C358 /* richtig.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C5CAEE07245153000082C358 /* richtig.mp3 */; };
+		C5CAEE10245157430082C358 /* falsch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C5CAEE0F245157430082C358 /* falsch.mp3 */; };
+		C5CAEE122451577E0082C358 /* falsch2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C5CAEE112451577E0082C358 /* falsch2.mp3 */; };
+		C5CF1CEE24439FAD00699ECA /* StatusbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CF1CED24439FAD00699ECA /* StatusbarView.swift */; };
+		C5CF1CF02443A6F600699ECA /* BalkenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CF1CEF2443A6F600699ECA /* BalkenView.swift */; };
+		C5E7D57F24457C13005BB823 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E7D57E24457C13005BB823 /* TimerView.swift */; };
+		C5F38D3F2440E1B700C9F294 /* SpielvorbereitungenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F38D3E2440E1B700C9F294 /* SpielvorbereitungenView.swift */; };
+		C5F38D412440F7B800C9F294 /* ButtonKleinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F38D402440F7B800C9F294 /* ButtonKleinView.swift */; };
+		C5FBC2EE2442FD7A009AD633 /* BBuecherArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FBC2ED2442FD7A009AD633 /* BBuecherArray.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C502E7AB2E47D6B100FB3A0E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C50DE31924433783006992DA /* BibelbuecherAuswahlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibelbuecherAuswahlView.swift; sourceTree = "<group>"; };
+		C5127BD52442678500D3AB19 /* Bibelbuch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bibelbuch.swift; sourceTree = "<group>"; };
+		C5289308244C171700053A96 /* FortschrittHighscoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortschrittHighscoreView.swift; sourceTree = "<group>"; };
+		C52A169A24521BBB00B22196 /* select.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = select.mp3; sourceTree = "<group>"; };
+		C5301697243BD70A00534731 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		C5368A502449BEAA00BDC79D /* SpielEinstellungenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpielEinstellungenView.swift; sourceTree = "<group>"; };
+		C540B6AA2454357200C5B4BC /* help.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = help.mp3; sourceTree = "<group>"; };
+		C5519C0E2444792A00770185 /* HilfeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HilfeView.swift; sourceTree = "<group>"; };
+		C553B19C243E3B8300E7C7A4 /* EinstellungenSpielerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EinstellungenSpielerView.swift; sourceTree = "<group>"; };
+		C562FB9D244B31CD003068FF /* Hilfe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hilfe.swift; sourceTree = "<group>"; };
+		C562FB9F244B333C003068FF /* HilfenArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HilfenArray.swift; sourceTree = "<group>"; };
+		C562FBA1244B3516003068FF /* Bibelvers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bibelvers.swift; sourceTree = "<group>"; };
+		C562FBA3244B361C003068FF /* BibelverseArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibelverseArray.swift; sourceTree = "<group>"; };
+		C562FBA5244B6145003068FF /* DELETEFortschrittListeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DELETEFortschrittListeView.swift; sourceTree = "<group>"; };
+		C562FBA7244B735F003068FF /* FortschrittView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortschrittView.swift; sourceTree = "<group>"; };
+		C565180D243EE2780095DAF2 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		C57C082424514AA60059098B /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlaySound.swift; path = BibelSpiel/Views/PlaySound.swift; sourceTree = SOURCE_ROOT; };
+		C57E44C92439D36A00FB9D5C /* TxtBaustein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxtBaustein.swift; sourceTree = "<group>"; };
+		C57E44CC2439D58800FB9D5C /* Fusszeile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fusszeile.swift; sourceTree = "<group>"; };
+		C57E44CE2439DFC100FB9D5C /* ButtonGrossView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGrossView.swift; sourceTree = "<group>"; };
+		C5875437244AE5230021BCD4 /* CalculateBreiteAnzeigeZeit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateBreiteAnzeigeZeit.swift; sourceTree = "<group>"; };
+		C5933CD624478A4B00307C42 /* SpielEndeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpielEndeView.swift; sourceTree = "<group>"; };
+		C5933CD824478F5700307C42 /* SpielEndeBalkenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpielEndeBalkenView.swift; sourceTree = "<group>"; };
+		C5953C42245003AC00C5D23B /* CalculatePositionFortschritt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CalculatePositionFortschritt.swift; path = BibelSpiel/Views/CalculatePositionFortschritt.swift; sourceTree = SOURCE_ROOT; };
+		C5953C442450040700C5D23B /* CreateFetchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateFetchRequest.swift; path = BibelSpiel/Views/CreateFetchRequest.swift; sourceTree = SOURCE_ROOT; };
+		C597FF1B244EB5E1001E8C09 /* FortschrittFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortschrittFilterView.swift; sourceTree = "<group>"; };
+		C598CB702455910B002740F1 /* Formatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Formatter+Extensions.swift"; path = "BibelSpiel/Views/Formatter+Extensions.swift"; sourceTree = SOURCE_ROOT; };
+		C598CB7224559122002740F1 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		C59DDE782441BA1000C3693D /* SpielView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpielView.swift; sourceTree = "<group>"; };
+		C59DDE7A2441C2F100C3693D /* SpielFortschrittView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpielFortschrittView.swift; sourceTree = "<group>"; };
+		C5ACD83A244F4CC40042E934 /* GeneratePosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratePosition.swift; sourceTree = "<group>"; };
+		C5BAD242244A28E900096ECC /* SpielBeendenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpielBeendenView.swift; sourceTree = "<group>"; };
+		C5BAD246244A2DF600096ECC /* ButtonVariabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonVariabelView.swift; sourceTree = "<group>"; };
+		C5BF8009245486620062B60B /* WillkommenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WillkommenView.swift; sourceTree = "<group>"; };
+		C5BF800B245490580062B60B /* SpracheWaehlenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpracheWaehlenView.swift; sourceTree = "<group>"; };
+		C5C82A5B2450BAD9008FD038 /* SpielEndeBonusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpielEndeBonusView.swift; sourceTree = "<group>"; };
+		C5C913FF2439167E00C59B07 /* BibelSpiel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BibelSpiel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5C914022439167E00C59B07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C5C914042439167E00C59B07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C5C914072439167E00C59B07 /* BibelSpiel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BibelSpiel.xcdatamodel; sourceTree = "<group>"; };
+		C5C914092439167E00C59B07 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		C5C9140B2439168700C59B07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C5C9140E2439168700C59B07 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C5C914112439168700C59B07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C5C914132439168700C59B07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5C9141A243920AE00C59B07 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		C5C91420243936AD00C59B07 /* Kopfzeile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kopfzeile.swift; sourceTree = "<group>"; };
+		C5CAEE04245152740082C358 /* menu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = menu.mp3; sourceTree = "<group>"; };
+		C5CAEE07245153000082C358 /* richtig.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = richtig.mp3; sourceTree = "<group>"; };
+		C5CAEE0F245157430082C358 /* falsch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = falsch.mp3; sourceTree = "<group>"; };
+		C5CAEE112451577E0082C358 /* falsch2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = falsch2.mp3; sourceTree = "<group>"; };
+		C5CF1CED24439FAD00699ECA /* StatusbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusbarView.swift; sourceTree = "<group>"; };
+		C5CF1CEF2443A6F600699ECA /* BalkenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalkenView.swift; sourceTree = "<group>"; };
+		C5E7D57E24457C13005BB823 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		C5F38D3E2440E1B700C9F294 /* SpielvorbereitungenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpielvorbereitungenView.swift; sourceTree = "<group>"; };
+		C5F38D402440F7B800C9F294 /* ButtonKleinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonKleinView.swift; sourceTree = "<group>"; };
+		C5FBC2ED2442FD7A009AD633 /* BBuecherArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBuecherArray.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C5C913FC2439167E00C59B07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C57E44CB2439D37000FB9D5C /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				C598CB702455910B002740F1 /* Formatter+Extensions.swift */,
+				C598CB7224559122002740F1 /* Int+Extensions.swift */,
+				C5127BD52442678500D3AB19 /* Bibelbuch.swift */,
+				C5FBC2ED2442FD7A009AD633 /* BBuecherArray.swift */,
+				C562FBA1244B3516003068FF /* Bibelvers.swift */,
+				C562FBA3244B361C003068FF /* BibelverseArray.swift */,
+				C5875437244AE5230021BCD4 /* CalculateBreiteAnzeigeZeit.swift */,
+				C5953C42245003AC00C5D23B /* CalculatePositionFortschritt.swift */,
+				C5953C442450040700C5D23B /* CreateFetchRequest.swift */,
+				C5ACD83A244F4CC40042E934 /* GeneratePosition.swift */,
+				C562FB9D244B31CD003068FF /* Hilfe.swift */,
+				C562FB9F244B333C003068FF /* HilfenArray.swift */,
+				C57C082424514AA60059098B /* PlaySound.swift */,
+				C565180D243EE2780095DAF2 /* Settings.swift */,
+				C57E44C92439D36A00FB9D5C /* TxtBaustein.swift */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
+		C5C913F62439167E00C59B07 = {
+			isa = PBXGroup;
+			children = (
+				C502E7AB2E47D6B100FB3A0E /* README.md */,
+				C5C914012439167E00C59B07 /* BibelSpiel */,
+				C5C914002439167E00C59B07 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C5C914002439167E00C59B07 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C5C913FF2439167E00C59B07 /* BibelSpiel.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C5C914012439167E00C59B07 /* BibelSpiel */ = {
+			isa = PBXGroup;
+			children = (
+				C5C914022439167E00C59B07 /* AppDelegate.swift */,
+				C5C914042439167E00C59B07 /* SceneDelegate.swift */,
+				C5301697243BD70A00534731 /* Globals.swift */,
+				C5CAEE062451527D0082C358 /* Sounds */,
+				C57E44CB2439D37000FB9D5C /* Functions */,
+				C5C9141924391BCC00C59B07 /* Views */,
+				C5C9140B2439168700C59B07 /* Assets.xcassets */,
+				C5C914102439168700C59B07 /* LaunchScreen.storyboard */,
+				C5C914132439168700C59B07 /* Info.plist */,
+				C5C914062439167E00C59B07 /* BibelSpiel.xcdatamodeld */,
+				C5C9140D2439168700C59B07 /* Preview Content */,
+			);
+			path = BibelSpiel;
+			sourceTree = "<group>";
+		};
+		C5C9140D2439168700C59B07 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C5C9140E2439168700C59B07 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C5C9141924391BCC00C59B07 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C5BF800B245490580062B60B /* SpracheWaehlenView.swift */,
+				C5BF8009245486620062B60B /* WillkommenView.swift */,
+				C5C914092439167E00C59B07 /* StartView.swift */,
+				C553B19C243E3B8300E7C7A4 /* EinstellungenSpielerView.swift */,
+				C562FBA7244B735F003068FF /* FortschrittView.swift */,
+				C597FF1B244EB5E1001E8C09 /* FortschrittFilterView.swift */,
+				C562FBA5244B6145003068FF /* DELETEFortschrittListeView.swift */,
+				C5289308244C171700053A96 /* FortschrittHighscoreView.swift */,
+				C5F38D3E2440E1B700C9F294 /* SpielvorbereitungenView.swift */,
+				C59DDE782441BA1000C3693D /* SpielView.swift */,
+				C59DDE7A2441C2F100C3693D /* SpielFortschrittView.swift */,
+				C50DE31924433783006992DA /* BibelbuecherAuswahlView.swift */,
+				C5CF1CED24439FAD00699ECA /* StatusbarView.swift */,
+				C5E7D57E24457C13005BB823 /* TimerView.swift */,
+				C5368A502449BEAA00BDC79D /* SpielEinstellungenView.swift */,
+				C5BAD242244A28E900096ECC /* SpielBeendenView.swift */,
+				C5933CD624478A4B00307C42 /* SpielEndeView.swift */,
+				C5933CD824478F5700307C42 /* SpielEndeBalkenView.swift */,
+				C5C82A5B2450BAD9008FD038 /* SpielEndeBonusView.swift */,
+				C5C9141C243920B300C59B07 /* HelpViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C5C9141C243920B300C59B07 /* HelpViews */ = {
+			isa = PBXGroup;
+			children = (
+				C5CF1CEF2443A6F600699ECA /* BalkenView.swift */,
+				C57E44CE2439DFC100FB9D5C /* ButtonGrossView.swift */,
+				C5F38D402440F7B800C9F294 /* ButtonKleinView.swift */,
+				C5BAD246244A2DF600096ECC /* ButtonVariabelView.swift */,
+				C5519C0E2444792A00770185 /* HilfeView.swift */,
+				C57E44CC2439D58800FB9D5C /* Fusszeile.swift */,
+				C5C91420243936AD00C59B07 /* Kopfzeile.swift */,
+				C5C9141A243920AE00C59B07 /* LogoView.swift */,
+			);
+			path = HelpViews;
+			sourceTree = "<group>";
+		};
+		C5CAEE062451527D0082C358 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				C5CAEE0F245157430082C358 /* falsch.mp3 */,
+				C5CAEE112451577E0082C358 /* falsch2.mp3 */,
+				C540B6AA2454357200C5B4BC /* help.mp3 */,
+				C5CAEE07245153000082C358 /* richtig.mp3 */,
+				C52A169A24521BBB00B22196 /* select.mp3 */,
+				C5CAEE04245152740082C358 /* menu.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C5C913FE2439167E00C59B07 /* BibelSpiel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5C914162439168700C59B07 /* Build configuration list for PBXNativeTarget "BibelSpiel" */;
+			buildPhases = (
+				C5C913FB2439167E00C59B07 /* Sources */,
+				C5C913FC2439167E00C59B07 /* Frameworks */,
+				C5C913FD2439167E00C59B07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BibelSpiel;
+			productName = BibelSpiel;
+			productReference = C5C913FF2439167E00C59B07 /* BibelSpiel.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C5C913F72439167E00C59B07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = meitosoft;
+				TargetAttributes = {
+					C5C913FE2439167E00C59B07 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+				};
+			};
+			buildConfigurationList = C5C913FA2439167E00C59B07 /* Build configuration list for PBXProject "BibelSpiel" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C5C913F62439167E00C59B07;
+			productRefGroup = C5C914002439167E00C59B07 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C5C913FE2439167E00C59B07 /* BibelSpiel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C5C913FD2439167E00C59B07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C52A169B24521BBB00B22196 /* select.mp3 in Resources */,
+				C5C914122439168700C59B07 /* LaunchScreen.storyboard in Resources */,
+				C502E7AC2E47D6C100FB3A0E /* README.md in Resources */,
+				C540B6AB2454357200C5B4BC /* help.mp3 in Resources */,
+				C5CAEE122451577E0082C358 /* falsch2.mp3 in Resources */,
+				C5C9140F2439168700C59B07 /* Preview Assets.xcassets in Resources */,
+				C5C9140C2439168700C59B07 /* Assets.xcassets in Resources */,
+				C5CAEE08245153000082C358 /* richtig.mp3 in Resources */,
+				C5CAEE05245152750082C358 /* menu.mp3 in Resources */,
+				C5CAEE10245157430082C358 /* falsch.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C5C913FB2439167E00C59B07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5953C43245003AC00C5D23B /* CalculatePositionFortschritt.swift in Sources */,
+				C57C082524514AA60059098B /* PlaySound.swift in Sources */,
+				C598CB712455910B002740F1 /* Formatter+Extensions.swift in Sources */,
+				C50DE31A24433783006992DA /* BibelbuecherAuswahlView.swift in Sources */,
+				C562FBA0244B333C003068FF /* HilfenArray.swift in Sources */,
+				C5ACD83B244F4CC40042E934 /* GeneratePosition.swift in Sources */,
+				C5CF1CF02443A6F600699ECA /* BalkenView.swift in Sources */,
+				C5F38D412440F7B800C9F294 /* ButtonKleinView.swift in Sources */,
+				C5C9141B243920AE00C59B07 /* LogoView.swift in Sources */,
+				C59DDE7B2441C2F100C3693D /* SpielFortschrittView.swift in Sources */,
+				C59DDE792441BA1000C3693D /* SpielView.swift in Sources */,
+				C5BAD243244A28E900096ECC /* SpielBeendenView.swift in Sources */,
+				C5289309244C171700053A96 /* FortschrittHighscoreView.swift in Sources */,
+				C5BF800C245490580062B60B /* SpracheWaehlenView.swift in Sources */,
+				C5E7D57F24457C13005BB823 /* TimerView.swift in Sources */,
+				C598CB7324559122002740F1 /* Int+Extensions.swift in Sources */,
+				C562FBA8244B735F003068FF /* FortschrittView.swift in Sources */,
+				C5C91421243936AD00C59B07 /* Kopfzeile.swift in Sources */,
+				C565180E243EE2780095DAF2 /* Settings.swift in Sources */,
+				C5C914032439167E00C59B07 /* AppDelegate.swift in Sources */,
+				C5933CD724478A4B00307C42 /* SpielEndeView.swift in Sources */,
+				C562FBA6244B6145003068FF /* DELETEFortschrittListeView.swift in Sources */,
+				C5953C452450040700C5D23B /* CreateFetchRequest.swift in Sources */,
+				C5C914052439167E00C59B07 /* SceneDelegate.swift in Sources */,
+				C57E44CD2439D58800FB9D5C /* Fusszeile.swift in Sources */,
+				C5301698243BD70A00534731 /* Globals.swift in Sources */,
+				C5519C0F2444792A00770185 /* HilfeView.swift in Sources */,
+				C597FF1C244EB5E2001E8C09 /* FortschrittFilterView.swift in Sources */,
+				C562FBA4244B361C003068FF /* BibelverseArray.swift in Sources */,
+				C5C9140A2439167E00C59B07 /* StartView.swift in Sources */,
+				C57E44CA2439D36A00FB9D5C /* TxtBaustein.swift in Sources */,
+				C553B19D243E3B8300E7C7A4 /* EinstellungenSpielerView.swift in Sources */,
+				C5BAD247244A2DF600096ECC /* ButtonVariabelView.swift in Sources */,
+				C5127BD62442678500D3AB19 /* Bibelbuch.swift in Sources */,
+				C5933CD924478F5700307C42 /* SpielEndeBalkenView.swift in Sources */,
+				C562FBA2244B3516003068FF /* Bibelvers.swift in Sources */,
+				C5C82A5C2450BAD9008FD038 /* SpielEndeBonusView.swift in Sources */,
+				C5C914082439167E00C59B07 /* BibelSpiel.xcdatamodeld in Sources */,
+				C562FB9E244B31CD003068FF /* Hilfe.swift in Sources */,
+				C5F38D3F2440E1B700C9F294 /* SpielvorbereitungenView.swift in Sources */,
+				C57E44CF2439DFC100FB9D5C /* ButtonGrossView.swift in Sources */,
+				C5CF1CEE24439FAD00699ECA /* StatusbarView.swift in Sources */,
+				C5BF800A245486620062B60B /* WillkommenView.swift in Sources */,
+				C5368A512449BEAA00BDC79D /* SpielEinstellungenView.swift in Sources */,
+				C5875438244AE5230021BCD4 /* CalculateBreiteAnzeigeZeit.swift in Sources */,
+				C5FBC2EE2442FD7A009AD633 /* BBuecherArray.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C5C914102439168700C59B07 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5C914112439168700C59B07 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C5C914142439168700C59B07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C5C914152439168700C59B07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C5C914172439168700C59B07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_ASSET_PATHS = "\"BibelSpiel/Preview Content\"";
+				DEVELOPMENT_TEAM = BJRWSW5JCZ;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = BibelSpiel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meitosoft.BibelSpiel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		C5C914182439168700C59B07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_ASSET_PATHS = "\"BibelSpiel/Preview Content\"";
+				DEVELOPMENT_TEAM = BJRWSW5JCZ;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = BibelSpiel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meitosoft.BibelSpiel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C5C913FA2439167E00C59B07 /* Build configuration list for PBXProject "BibelSpiel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5C914142439168700C59B07 /* Debug */,
+				C5C914152439168700C59B07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5C914162439168700C59B07 /* Build configuration list for PBXNativeTarget "BibelSpiel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5C914172439168700C59B07 /* Debug */,
+				C5C914182439168700C59B07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C5C914062439167E00C59B07 /* BibelSpiel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C5C914072439167E00C59B07 /* BibelSpiel.xcdatamodel */,
+			);
+			currentVersion = C5C914072439167E00C59B07 /* BibelSpiel.xcdatamodel */;
+			path = BibelSpiel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C5C913F72439167E00C59B07 /* Project object */;
+}
