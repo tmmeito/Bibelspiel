@@ -47,8 +47,7 @@ struct BibelbuecherAuswahlView: View {
                     }
                 
                 
-                VorhandeneBBuecherArray(size: CGSize(width: geometry.size.width * self.breite,
-                                                   height: geometry.size.height * self.hoehe))
+                VorhandeneBBuecherArray()
                     .offset(x: 0, y: 25)
                 
             }
@@ -60,10 +59,9 @@ struct BibelbuecherAuswahlView: View {
 
 struct VorhandeneBBuecherArray: View {
 
-    let size: CGSize
     @EnvironmentObject var globals: Globals
     @ObservedObject var settings = Settings.shared
-
+    
     var body: some View {
 
         ScrollView(.vertical) {
@@ -82,8 +80,7 @@ struct VorhandeneBBuecherArray: View {
                 }
                 Spacer()
             }
-        }
-        .frame(width: size.width * 0.9, height: size.height * 0.6)
+        }.frame(width: 250, height: 300)
 
     }
     
