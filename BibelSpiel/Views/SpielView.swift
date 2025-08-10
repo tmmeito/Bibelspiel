@@ -35,7 +35,6 @@ struct SpielView: View {
                         .position(x: UIScreen.main.bounds.width * 0.345, y: UIScreen.main.bounds.height * 0.515)
 
                     BibelbuecherAuswahlView()
-                        .frame(width: geometry.size.width * 0.26, height: geometry.size.height * 0.5)
                         .position(x: geometry.size.width * positionX, y: geometry.size.height * 0.765)
 
                 } else if self.settings.selectedAuswahlleiste == 1 {  // links
