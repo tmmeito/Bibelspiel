@@ -23,7 +23,6 @@ struct SpielView: View {
         }
     }
 
-
     private var auswahlMultipliers: (fortschritt: CGFloat, bibel: CGFloat) {
         settings.selectedAuswahlleiste == 0
             ? (0.345, positionX)
@@ -72,10 +71,7 @@ struct SpielView: View {
                                 .allowsTightening(true)
                                 .minimumScaleFactor(0.7)
                         }
-                        .frame(width: size.width * 0.28, height: size.height * 0.23, alignment: .leading)
-
                         Spacer()
-
                     }.frame(width: UIScreen.main.bounds.width * 0.28, height: UIScreen.main.bounds.height * 0.23) // 290 80
                 }.position(x: UIScreen.main.bounds.width * 0.2, y: UIScreen.main.bounds.height * 0.845)
 
@@ -93,8 +89,8 @@ struct SpielView: View {
                 default:
                     EmptyView()
                 }
+
             }
-            .frame(width: size.width, height: size.height)
         }
     }
 }
