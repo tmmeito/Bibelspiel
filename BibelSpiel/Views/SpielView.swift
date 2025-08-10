@@ -9,97 +9,84 @@
 import SwiftUI
 
 struct SpielView: View {
-    
+
     @EnvironmentObject var globals: Globals
     @ObservedObject var settings = Settings.shared
-    
-    let positionX: CGFloat = 1.22
-    
+
+    private var hilfeText: String {
+        if globals.hilfeVorhanden {
+            return "\(TxtBaustein(language: settings.language, phrase: "hilfeAnzeigenTxt_1")) \(globals.hilfePunkte) \(TxtBaustein(language: settings.language, phrase: "hilfeAnzeigenTxt_2")) \(settings.language == 0 ? TxtBaustein(language: settings.language, phrase: "hilfeAnzeigenTxt_3") : "")\(globals.cheatHilfe ? "." : "")"
+        } else {
+            return "\(TxtBaustein(language: settings.language, phrase: "hilfeAnzeigenTxt_keine"))"
+        }
+    }
+
     var body: some View {
-        
+
         GeometryReader { geometry in
-            
             ZStack {
                 Color.init("Hintergrund")
-                
-                VStack {
+
+                VStack(spacing: 0) {
                     Kopfzeile(txtBaustein: "reihenfolgeBibelbuecher")
                         .frame(height: geometry.size.height * 0.21)
-                    
+
                     Spacer()
-                }.padding(.top, 35)
-                
-                
-                if self.settings.selectedAuswahlleiste == 0 { // rechts
-                    SpielFortschrittView()
-                        .position(x: UIScreen.main.bounds.width * 0.345, y: UIScreen.main.bounds.height * 0.515)
 
-                    BibelbuecherAuswahlView()
-                        .position(x: geometry.size.width * positionX, y: geometry.size.height * 0.765)
+                    HStack(alignment: .top, spacing: geometry.size.width * 0.05) {
+                        SpielFortschrittView()
+                            .frame(width: geometry.size.width * 0.65, height: geometry.size.height * 0.5)
 
-                } else if self.settings.selectedAuswahlleiste == 1 {  // links
-                    SpielFortschrittView()
-                        .position(x: geometry.size.width * 0.645, y: geometry.size.height * 0.515)
-                    BibelbuecherAuswahlView()
-                        .position(x: geometry.size.width * 0.149, y: geometry.size.height * 0.765)
-                }
-                
-                StatusbarView()
-                    .position(x: geometry.size.width * positionX, y: geometry.size.height * 1.31)
-                    
-                BalkenView(txtBaustein: "zeit")
-                    .position(x: geometry.size.width * 0.895, y: geometry.size.height * 1.31)
-                
-                BalkenView(txtBaustein: "fortschritt")
-                    .position(x: geometry.size.width * 0.895, y: geometry.size.height * 1.37)
-                
-                HStack(spacing: 20) {
-                    HilfeView()
-                    
-                    HStack {
+                        BibelbuecherAuswahlView()
+                            .frame(width: geometry.size.width * 0.26, height: geometry.size.height * 0.5)
+                    }
+
+                    Spacer()
+
+                    HStack(spacing: 20) {
+                        HilfeView()
+
                         VStack(alignment: .leading, spacing: -3) {
-                            if self.globals.hilfeVorhanden {
-                                Text("\(TxtBaustein(language: self.settings.language, phrase: "hilfeAnzeigenTxt_1")) \(self.globals.hilfePunkte) \(TxtBaustein(language: self.settings.language, phrase: "hilfeAnzeigenTxt_2")) \(self.settings.language == 0 ? TxtBaustein(language: self.settings.language, phrase: "hilfeAnzeigenTxt_3") : "")\(self.globals.cheatHilfe ? "." : "")")
-                                    .font(.title)
-                                    .bold()
-                                    .lineLimit(2)
-                                    .foregroundColor(Color("Dunkel"))
-                                    .allowsTightening(true)
-                                    .minimumScaleFactor(0.7)
-                            } else {
-                                Text("\(TxtBaustein(language: self.settings.language, phrase: "hilfeAnzeigenTxt_keine"))")
-                                    .font(.title)
-                                    .bold()
-                                    .lineLimit(2)
-                                    .foregroundColor(Color("Dunkel"))
-                                    .allowsTightening(true)
-                                    .minimumScaleFactor(0.7)
+                            Text(hilfeText)
+                                .font(.title)
+                                .bold()
+                                .lineLimit(2)
+                                .foregroundColor(Color("Dunkel"))
+                                .allowsTightening(true)
+                                .minimumScaleFactor(0.7)
+                        }
+                        .frame(width: geometry.size.width * 0.28, height: geometry.size.height * 0.23, alignment: .leading)
+
+                        Spacer()
+
+                        VStack(spacing: geometry.size.height * 0.02) {
+                            StatusbarView()
+
+                            HStack(spacing: geometry.size.width * 0.02) {
+                                BalkenView(txtBaustein: "zeit")
+                                BalkenView(txtBaustein: "fortschritt")
                             }
                         }
-                        Spacer()
-                    }.frame(width: UIScreen.main.bounds.width * 0.28, height: UIScreen.main.bounds.height * 0.23) // 290 80
-                }.position(x: UIScreen.main.bounds.width * 0.2, y: UIScreen.main.bounds.height * 0.845)
-                
-                
-                if self.globals.hilfeAnzeigen {
-                    Fusszeile()
-                        .frame(height: UIScreen.main.bounds.height * 0.091)
-                        .position(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height * 0.96)
-                } else {
-                    Fusszeile()
-                        .frame(height: UIScreen.main.bounds.height * 0.007)
-                        .position(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height * 0.96)
-                }
-                
-                
-                
-                if self.globals.position == 8 {
-                    SpielEndeView(bibelteil: self.globals.bibelteil, schwierigkeitsgrad: self.globals.schwierigkeitsgrad)
-                } else if self.globals.position == 6 || self.globals.position == 7 {
-                   SpielEinstellungenView()
-                }
+                        .frame(width: geometry.size.width * 0.3)
+                    }
+                    .frame(height: geometry.size.height * 0.23)
 
+                    Fusszeile()
+                        .frame(height: geometry.size.height * (globals.hilfeAnzeigen ? 0.091 : 0.007))
+                }
+                .padding(.top, 35)
+                .padding(.horizontal, geometry.size.width * 0.05)
+
+                switch self.globals.position {
+                case 8:
+                    SpielEndeView(bibelteil: self.globals.bibelteil, schwierigkeitsgrad: self.globals.schwierigkeitsgrad)
+                case 6, 7:
+                   SpielEinstellungenView()
+                default:
+                    EmptyView()
+                }
             }
+            .frame(width: geometry.size.width, height: geometry.size.height)
         }
     }
 }
@@ -108,10 +95,11 @@ struct SpielView: View {
 struct SpielView_Previews: PreviewProvider {
     static var previews: some View {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
+
         return SpielView()
             .environmentObject(Globals(language: 0))
             .environment(\.managedObjectContext, context)
             .previewLayout(.fixed(width: 1024, height: 768))
     }
 }
+
