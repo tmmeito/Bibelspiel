@@ -18,16 +18,17 @@ struct TimerView: View {
     let referenceDate: Date
     @State var timer: Timer?
     
+    @available(iOS 14.0, *)
     var body: some View {
         
         ZStack {
+            Text("\(self.istTimerAktiv())")
             Text("\(self.timerInt > self.spielDauerReferenzInt ? "+": "")\(self.timerInt > self.spielDauerReferenzInt ? self.globals.zeitString(sekundenInt: self.timerInt - self.spielDauerReferenzInt) : self.globals.zeitString(sekundenInt: self.spielDauerReferenzInt - self.timerInt))")  // countUpString(from: referenceDate)
                 .font(.subheadline)
                 .bold()
                 .foregroundColor(Color.init("Dunkel"))
-
-        }
-        .onAppear() {
+            
+        }.onAppear() {
             self.globals.timerAktiv = true
             self.spielDauerReferenzInt = self.globals.spieldauerReferenz()
             self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
@@ -36,13 +37,6 @@ struct TimerView: View {
             }
             self.timer?.tolerance = 0.3
             RunLoop.current.add(self.timer!, forMode: RunLoop.Mode.common)
-        }
-        .onChange(of: globals.timerAktiv) { active in
-            guard !active else { return }
-            timer?.invalidate()
-            if globals.spielStartDatumInt == 0 {
-                globals.spielStartDatumInt = timerInt
-            }
         }
     }
     
@@ -73,6 +67,19 @@ struct TimerView: View {
                       components.second ?? 00)
     }
     
+    
+    func istTimerAktiv() -> String {
+        
+        if self.globals.timerAktiv {
+            return ""
+        } else {
+            self.timer?.invalidate()
+            if self.globals.spielStartDatumInt == 0 {
+                self.globals.spielStartDatumInt = self.timerInt
+            } 
+            return ""
+        }
+    }
     
 }
 
